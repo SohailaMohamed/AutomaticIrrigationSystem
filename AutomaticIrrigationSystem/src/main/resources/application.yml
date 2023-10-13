@@ -1,0 +1,24 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: AutomaticIrrigationSystem
+
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: 'postgres'
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: POSTGRESQL
+    properties:
+      hibernate:
+      format_sql: 'true'
+      driver-class-name: org.postgresql.Driver
+      dialect: org.hibernate.dialect.PostgresSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+#      ddl-auto: update
+    show-sql: 'true'
